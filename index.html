@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo"><span>G</span> GoodFood</div>
+      <ul class="menu">
+        <li>MENU</li>
+        <li class="active"><i class="fa fa-bar-chart"></i>Dashboard</li>
+        <li><i class="fa fa-shopping-cart"></i> Food Order</li>
+        <li><i class="fa fa-file-text-o"></i> Manage Menu</li>
+        <li><i class="fa fa-commenting"></i>Customer Review</li>
+      </ul>
+      <ul class="other">
+        <li><i class="fa fa-cog"></i>Settings</li>
+        <li><i class="fa fa-credit-card-alt"></i>Payment</li>
+        <li><i class="fa fa-user"></i>Accounts</li>
+        <li><i class="fa fa-info-circle"></i>Help</li>
+      </ul>
+    </div>
+
+    <div class="main">
+      <div class="topbar">
+        <input type="text" placeholder="Search..." />
+        <div class="profile">
+          <img class="burger" src="img/Emoticon.png" /> Delicious Burger
+          <i class="fa fa-bell"></i>
+        </div>
+        <div class="fa fa-bars" id="menu-btn"></div>
+      </div>
+
+      <div class="dashboard">
+        <h2>Dashboard</h2>
+        <div class="row">
+          <div class="card revenue">
+            <div class="report">
+              <h3>Revenue</h3>
+              <button class="btn">Report</button>
+            </div>
+            <p>IDR 7.852.000</p>
+            <span class="green"
+              ><i class="fa fa-arrow-up"></i> 2.1% vs last week</span
+            >
+            <div class="chart-placeholder">
+              <img src="img/Chart.png" alt="" />
+            </div>
+          </div>
+          <div class="card order-time">
+            <div class="report">
+              <h3>Order Time</h3>
+              <button class="btn">View Report</button>
+            </div>
+            <p>from 1-6 Dec, 2024</p>
+            <div class="order1"></div>
+            <div class="ordering">
+              <p><strong>Afternoon:</strong> 40%</p>
+              <p><strong>Evening:</strong> 32%</p>
+              <p><strong>Morning:</strong> 28%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="card rating">
+            <h3>Your Rating</h3>
+            <div class="circles">
+              <div class="parent">
+                <div class="circle purple">85%<br />Hygiene</div>
+              </div>
+              <div class="parent blue1">
+                <div class="circle blue">92%<br />Packaging</div>
+              </div>
+              <div class="parent orange1">
+                <div class="circle orange">85%<br />Food Taste</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card ordered-food">
+            <h3>Most Ordered Food</h3>
+            <p class="paraas">selling products ding dong bubble</p>
+            <ul>
+              <li>
+                <img class="dinner" src="./img/image 3.png" />Fresh Salad Bowl
+                <span>IDR 65.000</span>
+              </li>
+              <li>
+                <img class="dinner" src="./img/image 4.png" />Chicken Noodles
+                <span>IDR 75.000</span>
+              </li>
+              <li>
+                <img class="dinner" src="./img/image 5.png" />Smoothie Fruits
+                <span>IDR 60.000</span>
+              </li>
+              <li>
+                <img class="dinner" src="./img/image 5.png" />HOT Chicken Wings
+                <span>IDR 45.000</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="card order-summary">
+            <h3>Order</h3>
+            <p>2,568</p>
+            <span class="red"
+              ><i class="fa fa-arrow-down"></i> 2.5% vs last week</span
+            >
+            <div class="chart-placeholder">
+              <img src="img/Line 35.png" />
+            </div>
+            <div class="last">
+              <h4 class="para">last 6 days</h4>
+              <h4 class="para">last week</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const navbar = document.querySelector(".sidebar");
+
+      document.querySelector("#menu-btn").onclick = () => {
+        navbar.classList.toggle("show");
+      };
+    </script>
+  </body>
+</html>

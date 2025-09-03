@@ -1,0 +1,394 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.sidebar {
+  position: fixed;
+  width: 220px;
+  background-color: #f9f9ff;
+  height: 100vh;
+  border-right: 1px solid #e0e0e0;
+}
+
+.logo {
+  padding: 30px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 50px;
+  color: #5a67ba;
+  border-bottom: 1px solid;
+  /* border: 2px solid red; */
+}
+.logo span {
+  padding: 6px 13px;
+  background-color: #5a67ba;
+  color: white;
+  border-radius: 50%;
+}
+
+.menu,
+.other {
+  list-style: none;
+  margin-bottom: 40px;
+  overflow-y: visible;
+}
+
+.menu li,
+.other li {
+  margin: 15px 20px;
+  color: #555;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+.menu i,
+.other i {
+  padding: 5px 8px;
+}
+.menu li.active,
+.menu li:hover,
+.other li:hover {
+  background-color: #e6ebff;
+  color: #3f51b5;
+}
+
+.main {
+  flex: 1;
+  padding: 28px 30px;
+  margin-left: 20%;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.topbar input {
+  width: 550px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9ff;
+}
+
+.profile {
+  font-weight: bold;
+  display: flex;
+  gap: 10px;
+}
+.profile i {
+  margin-top: 6px;
+  position: relative;
+}
+.profile i::after {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  background: red;
+  border-radius: 50%;
+  right: -4px;
+  bottom: 16px;
+}
+.burger {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+#menu-btn {
+  display: none;
+  font-size: small;
+  cursor: pointer;
+}
+.dashboard {
+  margin: 30px 0;
+}
+.dashboard h2 {
+  margin: 20px 10px;
+}
+.dashboard .row {
+  display: flex;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.revenue {
+  /* border: 1px solid; */
+  width: 70%;
+  border-bottom: 1px solid #bbb;
+}
+.revenue p,
+.order-summary p {
+  font-size: 22px;
+  margin: 8px 0;
+}
+
+.green {
+  color: #4caf50;
+}
+
+.red {
+  color: #f44336;
+}
+
+.order-time {
+  width: 30%;
+  border-bottom: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+}
+.order1 {
+  height: 90px;
+  width: 90px;
+  border-top: 10px solid #0c1c79;
+  border-left: 10px solid #3f4770;
+  border-right: 10px solid #7c23bc;
+  border-bottom: 10px solid #460b84;
+  margin: 80px 90px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.order1::after {
+  content: "Afternoon 1pm-4pm 1,890 orders";
+  position: absolute;
+  top: -50px;
+  right: -70px;
+  background-color: #7b61ff;
+  color: #fff;
+  height: 80px;
+  width: 100px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-align: center;
+}
+.report {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  padding: 4px 12px;
+  color: #3f51b5;
+  background-color: transparent;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+.ordering {
+  display: flex;
+  gap: 20px;
+}
+.rating {
+  width: 33.3%;
+  border-right: 1px solid #bbb;
+}
+.ordered-food {
+  border-right: 1px solid #bbb;
+  width: 37%;
+}
+.order-summary {
+  width: 30%;
+}
+
+.chart-placeholder {
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  position: relative;
+}
+.chart-placeholder img {
+  background-image: url(img/Group\ 43.png);
+  background-size: cover;
+  width: 95%;
+}
+
+.circles {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.parent {
+  width: 90px;
+  height: 91px;
+  border-radius: 50%;
+  border: 2px solid #7b61ff;
+  border-left: transparent;
+  text-align: center;
+  border-top: 3px solid #7b61ff;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #7b61ff;
+  border-bottom: 3px solid #7b61ff;
+}
+
+.order1:hover {
+  transform: rotate(360deg);
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: white;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  padding: 10px;
+  margin-left: 2px;
+  margin-top: 3px;
+}
+
+.purple {
+  background-color: #7b61ff;
+}
+
+.blue {
+  background-color: #30bced;
+}
+.blue1 {
+  border-top: 3px solid #30bced;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #30bced;
+  border-bottom: 3px solid #30bced;
+}
+.orange {
+  background-color: #ffb74d;
+}
+.orange1 {
+  border-top: 3px solid #ffb74d;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #ffb74d;
+  border-bottom: 3px solid #ffb74d;
+}
+.ordered-food ul {
+  list-style: none;
+  margin-top: 15px;
+  line-height: 2;
+}
+
+.ordered-food li {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #bbb;
+}
+.ordered-food .paraas {
+  margin-top: 10px;
+}
+.dinner {
+  border-radius: 50%;
+}
+.last {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+/* Mobile View: */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 170px;
+    padding: 10px 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .logo {
+    margin-top: 20px;
+    font-size: 10px;
+    padding: 10px 0;
+    text-align: start;
+  }
+
+  .logo span {
+    margin-left: 20px;
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+
+  .menu li,
+  .other li {
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 12px;
+    text-align: start;
+    margin-left: 20px;
+  }
+
+  .topbar input {
+    width: 60%;
+  }
+  .profile {
+    margin-left: 10px;
+    font-size: 10px;
+    font-weight: 600;
+    gap: 12px;
+  }
+  .profile i {
+    font-size: 20px;
+    margin-right: 8px;
+    position: relative;
+  }
+  .profile i::after {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 2px;
+    margin-right: 3px;
+  }
+  #menu-btn {
+    display: block;
+    padding: 5px 8px;
+    font-size: 30px;
+    margin-right: -20px;
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .main {
+    margin-left: 0;
+  }
+  .img {
+    padding: 5px 8px;
+  }
+
+  .dashboard .row,
+  .ordering,
+  .report,
+  .last {
+    flex-direction: column;
+  }
+  .btn {
+    margin-top: 10px;
+  }
+  .revenue,
+  .order-time,
+  .rating,
+  .ordered-food,
+  .order-summary {
+    width: 100%;
+    border: none;
+  }
+
+  .order1 {
+    margin: 49px auto;
+  }
+
+  .chart-placeholder img {
+    width: 100%;
+  }
+}
